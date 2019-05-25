@@ -32,3 +32,25 @@ sudo cp ./bazel-bin/runsc/linux_amd64_pure_stripped/runsc /usr/local/bin
 
 目前国内关于gVisor的学习资料相对匮乏，所以主要的请参照[gVisor官网文档](<https://gvisor.dev/docs/>)和[gVisor源码](<https://github.com/google/gvisor>)。
 
+#### gVisor设置platform为kvm
+安装依赖
+```shell
+sudo apt-get install qemu-kvm
+```
+修改/etc/docker/daemon.json文件，增加参数
+```json
+{
+    "runtimes": {
+        "runsc": {
+            "path": "/usr/local/bin/runsc",
+            "runtimeArgs": [
+                "--platform=kvm"
+            ]
+       }
+    }
+}
+```
+重启docker
+```shell
+sudo systemctl restart docker
+```
