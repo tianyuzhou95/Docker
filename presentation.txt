@@ -1,0 +1,24 @@
+Hello everyone! My name is ZhouTianyu, today I will introduce a paper named "To Docker or Not to Docker: A Security Perspective". This article is mainly about docker and its security problems. Now let's start from the overview.
+
+There are four parts in this presentation. At first, we will take a brief look at the background of this paper. Next, I will introduce the basic components of Linux Containers and Docker. Then we focus on the Docker Security mechanisms and the challenges in Docker usages.
+
+Cloud computing is inherently rooted in virtualization technologies. 
+
+Recently, new lightweight virtualization technologies such as containers have become increasingly popular and nowadays an essential part of cloud offerings.
+
+Containers also tightly integrate into the host operating system, reducing the software overhead imposed by virtual machines (VMs).
+
+However, this tighter integration also increases the attack surface, raising security concerns. 
+
+Existing work on container security focuses mainly on the relationship between the host and the container.
+
+However, containers are now part of a complex ecosystem, which includes containers and various repositories and orchestrators. 
+
+And there are third-party elements running on different platforms provided by different providers. This can cause multiple vulnerabilities that an adversary could exploit to penetrate the system.
+
+These two parts have not been fully investigated yet.
+
+This paper then focus investigation on the Docker.
+It’s mainly because there are plenty of users and the docker needs to ensure security, besides,Docker is already running in some environments, making it possible to run experiments and explore the practicality of some attacks.
+
+Here we take a brief look at Containers and the Docker.
