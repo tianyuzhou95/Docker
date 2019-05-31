@@ -26,7 +26,10 @@ $ sudo docker run hello-world
 通过运行以下语句，可以将当前的用户添加进可以运行**docker**的用户当中。
 
 ```shell
-$ sudo usermod -aG docker $USER
+$ sudo groupadd docker
+$ sudo gpasswd -a ${USER} docker
+$ sudo systemctl restart docker
+$ reboot
 ```
 
 ##### 2. 国内镜像设置
